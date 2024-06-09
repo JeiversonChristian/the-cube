@@ -25,9 +25,13 @@ function createScene() {
     // interação do usuário com a câmera
     camera.attachControl(canvas, true);
 
-    // Adiciona luz
-    const light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
-    light.intensity = 1;
+    // Adiciona luz 1
+    const light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+    light1.intensity = 1;
+
+     // Adiciona luz 2
+     const light2 = new BABYLON.HemisphericLight("light2", new BABYLON.Vector3(0, -1, 0), scene);
+     light2.intensity = 1;
 
     // Cria a geometria do cubo
     const box = BABYLON.MeshBuilder.CreateBox("box", {size: 2}, scene);
